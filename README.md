@@ -2,26 +2,34 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
-## Development server
+## Nom du projet
+Teste technique Yello.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 	Technologies utilisées 
+Angular et Tailwind CSS.
 
-## Code scaffolding
+##	Objectif du projet 
+Créer une page web simple qui présente des cours disponibles sur la plateforme. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+# Prérequis
+##	Logiciels nécessaires :
+	Node.js (20.11.0)
+	Angular CLI ( 17.1.2)
+	Un éditeur de code (comme Visual Studio Code)
+##	Connaissances requises :
+	Concepts de base d'Angular
+	Notions de Tailwind CSS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+# Installation et configuration du projet
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 	Étapes pour cloner le projet :
+git `clone  https://github.com/fatouNiang/testTechYELLO.git`
+cd  testTechYELLO 
 
-## Running end-to-end tests
+##	Installation des dépendances :
+npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Défis rencontrés 
+Coupure d'electricité et lenteur de la connexion internet
