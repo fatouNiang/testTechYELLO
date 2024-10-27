@@ -8,9 +8,32 @@ import { initFlowbite } from 'flowbite';
 })
 export class AppComponent {
   title = 'testTechYELLO';
+
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+  
   ngOnInit(): void {
     initFlowbite();
+
+    // document.getElementById("menuToggle").addEventListener("click", function () {
+    //   const menu = document.getElementById("menu");
+    //   menu.classList.toggle("hidden");
+    //   menu.classList.toggle("flex");
+    // });
+
   }
+  // onClick(){
+
+  //   document.getElementById("menuToggle").addEventListener("click", function () {
+  //     const menu = document.getElementById("menu");
+  //     menu.classList.toggle("hidden");
+  //     menu.classList.toggle("flex");
+  //   });
+  // }
+
   setDark(val: string): void {
     const moon = document.querySelector(".moon");
     const sun = document.querySelector(".sun");

@@ -1,0 +1,27 @@
+/* Style de base pour la navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Cache le menu en version mobile */
+  .hidden {
+    display: none;
+  }
+  
+  /* Affiche le menu en version mobile quand `isMenuOpen` est true */
+  .flex {
+    display: flex;
+  }
+  
+  /* Styles pour les éléments de menu */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding: 8px 16px;
+  }
+  

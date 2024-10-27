@@ -1,6 +1,35 @@
+<nav class="fixed shadow-xl w-full z-30 flex bg-white dark:bg-[#0F172A] p-2 items-center justify-between h-16 px-4 md:px-10">
+  <div class="logo text-lg font-bold dark:text-white flex-none h-full flex items-center">
+    YELLO
+  </div>
+
+  <!-- Bouton hamburger pour mobile -->
+  <button (click)="toggleMenu()" class="md:hidden text-gray-500 focus:outline-none">
+    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+    </svg>
+  </button>
+
+  <!-- Menu principal -->
+  <div [ngClass]="{'hidden': !isMenuOpen, 'flex': isMenuOpen}" class="w-full md:flex md:items-center md:w-auto">
+    <ul class="flex flex-col md:flex-row font-semibold items-center justify-center space-y-2 md:space-y-0">
+      <li class="px-4 py-2 text-indigo-500"><a href="#">Formation</a></li>
+      <li class="px-4 py-2 hover:text-indigo-400"><a href="#">Temoignages</a></li>
+      <li class="px-4 py-2 hover:text-indigo-400"><a href="#">Ressources</a></li>
+      <li class="px-4 py-2 hover:text-indigo-400"><a href="#">Communaute</a></li>
+      <li class="px-4 py-2 hover:text-indigo-400"><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Section droite (actions utilisateur) -->
+  <div class="hidden md:flex space-x-3 items-center">
+    <!-- Ajouter ici des actions supplémentaires si nécessaire -->
+  </div>
+</nav>
 
 
- <nav class="fixed shadow-xl w-full z-30 flex bg-white dark:bg-[#0F172A] p-2 items-center justify-center h-16 px-10">
+
+ <!-- <nav class="fixed shadow-xl w-full z-30 flex bg-white dark:bg-[#0F172A] p-2 items-center justify-center h-16 px-10">
   <div class = "logo ml-12 dark:text-white  transform ease-in-out duration-500 flex-none h-full flex items-center justify-center">
       YELLO
   </div>
@@ -8,8 +37,7 @@
   <div class = "grow h-full flex items-center justify-center"></div>
   <div class="text-gray-500 order-3 w-full md:w-auto md:order-2">
     <ul class="flex font-semibold justify-center">
-              <!-- Active Link = text-indigo-500
-              Inactive Link = hover:text-indigo-500 -->
+            
       <li class="md:px-4 md:py-2 text-indigo-500"><a href="#">Formation</a></li>
       <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Temoignages</a></li>
       <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Ressources</a></li>
@@ -17,79 +45,14 @@
       <li class="md:px-4 md:py-2 hover:text-indigo-400"><a href="#">Contact</a></li>
     </ul>
   </div>
-  <!-- <div class="mr-8">
-    <input type="text"name="name" id="name" placeholder="Rechercher"
-      class="w-full rounded-full border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-    />
-  </div> -->
+
   <div class="flex-none h-full text-center flex items-center justify-end">
 
     <div class="flex space-x-3 items-center px-3">
-      <!-- <div class="block">
-        <div class="inline relative">
-            <button type="button"  class="inline-flex items-center relative px-2 border rounded-full hover:shadow-lg">
-                <div class="pl-1">
-                    <svg
-                        viewBox="0 0 32 32"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                        role="presentation"
-                        focusable="false"
-                        style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;"
-                    >
-                        <g fill="none" fill-rule="nonzero">
-                            <path d="m2 16h28"></path>
-                            <path d="m2 24h28"></path>
-                            <path d="m2 8h28"></path>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="block flex-grow-0 flex-shrink-0 h-10 w-12 pl-5">
-                    <svg
-                        viewBox="0 0 32 32"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                        role="presentation"
-                        focusable="false"
-                        style="display: block; height: 100%; width: 100%; fill: currentcolor;"
-                    >
-                        <path d="m16 .7c-8.437 0-15.3 6.863-15.3 15.3s6.863 15.3 15.3 15.3 15.3-6.863 15.3-15.3-6.863-15.3-15.3-15.3zm0 28c-4.021 0-7.605-1.884-9.933-4.81a12.425 12.425 0 0 1 6.451-4.4 6.507 6.507 0 0 1 -3.018-5.49c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5a6.513 6.513 0 0 1 -3.019 5.491 12.42 12.42 0 0 1 6.452 4.4c-2.328 2.925-5.912 4.809-9.933 4.809z"></path>
-                    </svg>
-                </div>
-            </button>
-        </div>
-    </div> -->
-      <!-- <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-            </li>
-            <li>
-              <a class="block py-2 text-orange-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="float-left" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 4a8 8 0 0 0-6.96 11.947A4.99 4.99 0 0 1 9 14h6a4.99 4.99 0 0 1 3.96 1.947A8 8 0 0 0 12 4m7.943 14.076A9.959 9.959 0 0 0 22 12c0-5.523-4.477-10-10-10S2 6.477 2 12a9.958 9.958 0 0 0 2.057 6.076l-.005.018l.355.413A9.98 9.98 0 0 0 12 22a9.947 9.947 0 0 0 5.675-1.765a10.055 10.055 0 0 0 1.918-1.728l.355-.413zM12 6a3 3 0 1 0 0 6a3 3 0 0 0 0-6" clip-rule="evenodd"/></svg>
-                Modifier profil</a>
-            </li>
-            <li>
-              <a class="block px-4 py-2 text-orange-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="float-left" width="1em" height="1em" viewBox="0 0 48 48"><defs><mask id="ipSSetting0"><g fill="none" stroke-linejoin="round" stroke-width="4"><path fill="#fff" stroke="#fff" d="M36.686 15.171a15.37 15.37 0 0 1 2.529 6.102H44v5.454h-4.785a15.37 15.37 0 0 1-2.529 6.102l3.385 3.385l-3.857 3.857l-3.385-3.385a15.37 15.37 0 0 1-6.102 2.529V44h-5.454v-4.785a15.37 15.37 0 0 1-6.102-2.529l-3.385 3.385l-3.857-3.857l3.385-3.385a15.37 15.37 0 0 1-2.529-6.102H4v-5.454h4.785a15.37 15.37 0 0 1 2.529-6.102l-3.385-3.385l3.857-3.857l3.385 3.385a15.37 15.37 0 0 1 6.102-2.529V4h5.454v4.785a15.37 15.37 0 0 1 6.102 2.529l3.385-3.385l3.857 3.857z"/><path fill="#000" stroke="#000" d="M24 29a5 5 0 1 0 0-10a5 5 0 0 0 0 10Z"/></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSSetting0)"/></svg>
-                Paramettres</a>
-            </li>
-            <li>
-              <a class="block px-4 py-2 text-orange-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="float-left" width="1em" height="1em" viewBox="0 0 24 24">
-                  <g fill="none"><path stroke="currentColor" stroke-width="2" d="M8 18.928A8 8 0 1 0 8 5.072"/>
-                    <path fill="currentColor" d="m2 12l-.78-.625l-.5.625l.5.625zm9 1a1 1 0 1 0 0-2zM5.22 6.375l-4 5l1.56 1.25l4-5zm-4 6.25l4 5l1.56-1.25l-4-5zM2 13h9v-2H2z"/>
-                  </g>
-                </svg>
-                Deconnection</a>
-            </li>
-          </ul>
-      </div> -->
     </div>
 
   </div>
-</nav> 
+</nav>  -->
 
 
 
